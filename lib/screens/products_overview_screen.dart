@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app_v6/models/product.dart';
+import 'file:///D:/All%20about%20Flutter/flutter_2021/shop_app_v6/lib/providers/product.dart';
 import 'package:shop_app_v6/widgets/product_grid_widget.dart';
 import 'package:shop_app_v6/widgets/product_item_widget.dart';
 
