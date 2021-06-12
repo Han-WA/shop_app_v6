@@ -4,6 +4,7 @@ import 'package:shop_app_v6/providers/cart_provider.dart';
 import 'package:shop_app_v6/providers/product.dart';
 import 'package:shop_app_v6/providers/products_provider.dart';
 import 'package:shop_app_v6/screens/cart_screen.dart';
+import 'package:shop_app_v6/widgets/app_drawer.dart';
 import 'package:shop_app_v6/widgets/badge.dart';
 import 'file:///D:/All%20about%20Flutter/flutter_2021/shop_app_v6/lib/providers/product.dart';
 import 'package:shop_app_v6/widgets/product_grid_widget.dart';
@@ -65,6 +66,7 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
           ),
         ],
       ),
+      drawer: AppDrawer(),
       body: ProductsGridWidget(_showOnlyFavorites),
     );
   }

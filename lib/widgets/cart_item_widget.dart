@@ -48,7 +48,7 @@ class CartItemWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "\$$price".length.toStringAsFixed(2),
+                    "\$$price",
                   ),
                 ),
               ),
