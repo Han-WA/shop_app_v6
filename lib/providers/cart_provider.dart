@@ -19,6 +19,18 @@ class CartProvider with ChangeNotifier {
 
   Map<String, CartItemModel> get items => _items;
 
+  int get itemCount {
+    return _items == null ? 0 : _items.length;
+  }
+
+  double get totalAmount {
+    var total = 0.0;
+    _items.forEach((key, cartItem) {
+      total += cartItem.price * cartItem.quantity;
+    });
+    return total == null ? 0 : total;
+  }
+
   void addItem(
     String productId,
     double price,
@@ -45,5 +57,11 @@ class CartProvider with ChangeNotifier {
         ),
       );
     }
+    notifyListeners();
+  }
+
+  void removeItem(String productId) {
+    _items.remove(productId);
+    notifyListeners();
   }
 }
